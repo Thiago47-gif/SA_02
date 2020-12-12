@@ -56,46 +56,49 @@ namespace SA02_ThiagoIgnacio_
                         for (int i = 0; i < numReceitas; i++)
                         {
                             Console.WriteLine("Receita #" + i + ": ");
-                            Console.WriteLine();
-                            Console.Write("Nome: ");
+                            
+                            Console.Write("\nNome: ");
                             nomeReceita = Console.ReadLine();
-                            Console.WriteLine();
-                            Console.Write("Código: ");
+                            
+                            Console.Write("\nCódigo: ");
                             int codigo = int.Parse(Console.ReadLine());
-                            Console.WriteLine();
-                            Console.Write("Tempo de Preparação(em minutos): ");
+                            
+                            Console.Write("\nTempo de Preparação(em minutos): ");
                             string tempoPreparacao = Console.ReadLine();
-                            Console.WriteLine();
-                            Console.Write("Grau de Dificuldade: ");
-                            Console.WriteLine();
+                            
+                            Console.Write("\nGrau de Dificuldade: \n");
+                            
                             Console.WriteLine("1-Fácil");
                             Console.WriteLine("2-Médio");
                             Console.WriteLine("3-Difícil");
                             Console.WriteLine("4-Muito Difícil");
-                            Console.WriteLine();
-                            Console.Write("Opção: ");
+                            
+                            Console.Write("\nOpção: ");
                             int grauDificuldade = int.Parse(Console.ReadLine());
-                            Console.WriteLine();
-                            Console.Write("Número de Pessoas: ");
+                            
+                            Console.Write("\n\nNúmero de Pessoas: ");
                             int numPessoas = int.Parse(Console.ReadLine());
-                            Console.WriteLine();
-                            Console.Write("Categoria: ");
-                            string categoria = Console.ReadLine();
-                            Console.WriteLine();
-                            Console.Write("Descrição: ");
+
+                            Console.Write("\nCategoria: \n");
+
+                            Console.WriteLine("1-Doce");
+                            Console.WriteLine("2-Salgado");
+                            Console.WriteLine("3-Massa");
+
+                            Console.Write("\nOpção: ");
+                            int categoria = int.Parse(Console.ReadLine());
+
+                            Console.Write("\nDescrição: ");
                             string descricao = Console.ReadLine();
-                            Console.WriteLine();
-                            Console.Write("Ingredientes: ");
+                            
+                            Console.Write("\nIngredientes: ");
                             string ingredientes = Console.ReadLine();
-                            Console.WriteLine();
-                            Console.Write("Preco: R$ ");
+                            
+                            Console.Write("\nPreco: R$ ");
                             double preco = double.Parse(Console.ReadLine());
                             Console.WriteLine();
                             Console.WriteLine();
                             Console.WriteLine($"        ******* Receita '{nomeReceita}' Cadastrada ********");
-                            Console.WriteLine();
-                            Console.WriteLine("__________________________________________________________________________________");
-                            Console.WriteLine();
                             Console.WriteLine();
 
                             receita[i] = new Receita(nomeReceita, codigo, tempoPreparacao,
@@ -132,42 +135,46 @@ namespace SA02_ThiagoIgnacio_
                                 {
                                     receita[i] = null;
                                     Console.WriteLine("Receita #" + i + ": ");
-                                    Console.WriteLine();
-                                    Console.Write("Nome: ");
+
+                                    Console.Write("\nNome: ");
                                     nomeReceita = Console.ReadLine();
-                                    Console.WriteLine();
-                                    Console.Write("Código: ");
+
+                                    Console.Write("\nCódigo: ");
                                     int codigo = int.Parse(Console.ReadLine());
-                                    Console.WriteLine();
-                                    Console.Write("Tempo de Preparação(em minutos): ");
+
+                                    Console.Write("\nTempo de Preparação(em minutos): ");
                                     string tempoPreparacao = Console.ReadLine();
-                                    Console.WriteLine();
-                                    Console.Write("Grau de Dificuldade: ");
-                                    Console.WriteLine();
+
+                                    Console.Write("\nGrau de Dificuldade: \n");
+
                                     Console.WriteLine("1-Fácil");
                                     Console.WriteLine("2-Médio");
                                     Console.WriteLine("3-Difícil");
                                     Console.WriteLine("4-Muito Difícil");
-                                    Console.WriteLine();
-                                    Console.Write("Opção: ");
+
+                                    Console.Write("\nOpção: ");
                                     int grauDificuldade = int.Parse(Console.ReadLine());
-                                    Console.WriteLine();
-                                    Console.Write("Número de Pessoas: ");
+
+                                    Console.Write("\n\nNúmero de Pessoas: ");
                                     int numPessoas = int.Parse(Console.ReadLine());
-                                    Console.WriteLine();
-                                    Console.Write("Categoria: ");
-                                    string categoria = Console.ReadLine();
-                                    Console.WriteLine();
-                                    Console.Write("Descrição: ");
+
+                                    Console.Write("\nCategoria: \n");
+
+                                    Console.WriteLine("1-Doce");
+                                    Console.WriteLine("2-Salgado");
+                                    Console.WriteLine("3-Massa");
+
+                                    Console.Write("\nOpção: ");
+                                    int categoria = int.Parse(Console.ReadLine());
+
+                                    Console.Write("\nDescrição: ");
                                     string descricao = Console.ReadLine();
-                                    Console.WriteLine();
-                                    Console.Write("Ingredientes: ");
+
+                                    Console.Write("\nIngredientes: ");
                                     string ingredientes = Console.ReadLine();
-                                    Console.WriteLine();
-                                    Console.Write("Preco: R$ ");
+
+                                    Console.Write("\nPreco: R$ ");
                                     double preco = double.Parse(Console.ReadLine());
-                                    Console.WriteLine();
-                                    Console.WriteLine();
 
                                     receita[i] = new Receita(nomeReceita, codigo, tempoPreparacao,
                                                          grauDificuldade, numPessoas, categoria,
@@ -245,7 +252,7 @@ namespace SA02_ThiagoIgnacio_
                         Console.WriteLine();
                         Console.WriteLine();
                         Console.WriteLine();
-
+                         
                         string resp;
                         do
                         {
@@ -254,8 +261,7 @@ namespace SA02_ThiagoIgnacio_
                             Console.WriteLine("1-Listar receitas por dificuldade;");
                             Console.WriteLine("2-Listar receitas por categoria;");
                             Console.WriteLine("3-Listar receitas por tempo de preparação;");
-                            Console.WriteLine("4-Cotação de ingredientes;");
-                            Console.WriteLine("5-Valor estimado da receita;");
+                            Console.WriteLine("4-Valor estimado da receita;");
                             Console.WriteLine();
 
                             Console.Write("Digite a opção desejada para fazer a consulta da receita: ");
@@ -280,7 +286,7 @@ namespace SA02_ThiagoIgnacio_
                                     
                                      
                                     Console.ReadKey();
-                                    Console.Clear(); 
+                                    Console.Clear();
 
                                     List<Receita> receitasDificuldade = (from r in receitas
                                                                          orderby r.GrauDificuldade ascending
@@ -292,10 +298,69 @@ namespace SA02_ThiagoIgnacio_
 
                                     }
 
+                                    break;
 
+                                case 2:
+
+                                    Console.WriteLine("    =============================================");
+                                    Console.WriteLine("    *********** RECEITAS POR CATEGORIA **********");
+                                    Console.WriteLine("    =============================================");
+                                    Console.WriteLine();
+                                    Console.WriteLine();
+
+                                    List<Receita> receitasCategoria = (from j in receitas
+                                                                       orderby j.Categoria ascending
+                                                                       select j).ToList();
+
+                                    foreach (Receita j in receitasCategoria)
+                                    {
+                                        Console.WriteLine($"{j}\n");
+
+                                    }
+
+                                    break;
+
+                                case 3:
+
+                                    Console.WriteLine("    =====================================================");
+                                    Console.WriteLine("    ********** RECEITAS POR TEMPO DE PREPARAÇÃO *********");
+                                    Console.WriteLine("    =====================================================");
+                                    Console.WriteLine();
+                                    Console.WriteLine();
+
+                                    List<Receita> receitasTempoPreparacao = (from j in receitas
+                                                                       orderby j.TempoPreparacao ascending
+                                                                       select j).ToList();
+
+                                    foreach (Receita j in receitasTempoPreparacao)
+                                    {
+                                        Console.WriteLine($"{j}\n");
+
+                                    }
 
 
                                     break;
+
+                                case 4:
+
+                                    Console.WriteLine("    ================================================");
+                                    Console.WriteLine("    ********** RECEITAS POR VALOR ESTIMADO *********");
+                                    Console.WriteLine("    ================================================");
+                                    Console.WriteLine();
+                                    Console.WriteLine();
+
+                                    List<Receita> receitasValor = (from j in receitas
+                                                                   orderby j.Preco ascending
+                                                                   select j).ToList();
+
+                                    foreach (Receita j in receitasValor)
+                                    {
+                                        Console.WriteLine($"{j}\n");
+
+                                    }
+
+                                    break;
+
                             }
 
 
