@@ -1,0 +1,25 @@
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.exe
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.deps.json
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.runtimeconfig.json
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.runtimeconfig.dev.json
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.dll
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.pdb
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.AssemblyInfoInputs.cache
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.AssemblyInfo.cs
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.csproj.CoreCompileInputs.cache
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.dll
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.pdb
+C:\Users\thign\OneDrive\Documentos\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.genruntimeconfig.cache
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.exe
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.deps.json
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.runtimeconfig.json
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.runtimeconfig.dev.json
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.dll
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\bin\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.pdb
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.csprojAssemblyReference.cache
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.AssemblyInfoInputs.cache
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.AssemblyInfo.cs
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.csproj.CoreCompileInputs.cache
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.dll
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.pdb
+C:\Users\Thiago Ignácio\Documents\TDS08-Thiago Ignácio\SA02_ThiagoIgnacio_\SA02_ThiagoIgnacio_\obj\Debug\netcoreapp3.1\SA02_ThiagoIgnacio_.genruntimeconfig.cache
