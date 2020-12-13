@@ -239,10 +239,15 @@ namespace SA02_ThiagoIgnacio_
                         Console.WriteLine("    ====================================");
                         Console.WriteLine("    ******* RECEITAS CADASTRADAS *******");
                         Console.WriteLine("    ====================================\n\n");
+                         
+                        List<Receita> todasReceitas = (receitas).ToList();
 
-                        foreach (Receita i in receita) //Estrutura de repetição
+
+
+                        foreach (Receita i in receitas) //Estrutura de repetição
                         {
                             Console.WriteLine($"{i}\n");
+
                         }
 
                         Console.ReadKey(); //Chave vazia

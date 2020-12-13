@@ -42,7 +42,7 @@ namespace SA02_ThiagoIgnacio_
                 "\nCategoria: " + Categoria +
                 "\nDescrição: " + Descricao +
                 "\nIngredientes: " + Ingredientes +
-                "\nPreco: R$ " + Preco;
+                "\nPreco: R$ " + Preco.ToString("F2");
         }
     }
 }
