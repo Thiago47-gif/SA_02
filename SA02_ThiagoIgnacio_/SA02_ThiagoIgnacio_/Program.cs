@@ -9,15 +9,15 @@ namespace SA02_ThiagoIgnacio_
     {
         static void Main(string[] args)
         {
-            Receita[] receita = new Receita[4];
-            List<Receita> receitas = new List<Receita>();
+            Receita[] receita = new Receita[4]; //Vetor - Cadastrar, Editar, Eliminar e Exibir Receitas Existentes
+            List<Receita> receitas = new List<Receita>(); //Lista - Consulta de Receitas
 
-            string menu;
-            string voltarEdicao;
-            int cont = 0;
-            string nomeReceita;
+            string menu; //Voltar ciclo de repetição do menu (do while)
+            string voltarEdicao; //Voltar ciclo de repetição "editar receita" (do while)
+            int cont = 0; //Contador de receitas cadastradas
+            
 
-            do
+            do //Inicializando Ciclo de repetição
             {
                 Console.WriteLine("    ****************************************************");
                 Console.WriteLine("    *                   MENU PRINCIPAL                 *");
@@ -27,38 +27,34 @@ namespace SA02_ThiagoIgnacio_
                 Console.WriteLine("    *                3- ELIMINAR RECEITAS              *");
                 Console.WriteLine("    *                4- RECEITAS CADASTRADAS           *");
                 Console.WriteLine("    *                5- CONSULTA                       *");
-                Console.WriteLine("    ****************************************************");
-                Console.WriteLine();
-                Console.WriteLine();
+                Console.WriteLine("    ****************************************************\n\n");
 
                 Console.Write("Digite a opção desejada no menu:  ");
-                int respostaMenu = int.Parse(Console.ReadLine());
+                int respostaMenu = int.Parse(Console.ReadLine()); //Opção do menu
 
-                Console.ReadKey();
-                Console.Clear();
+                Console.Clear(); //Limpar tela
 
                 Console.WriteLine();
-                Console.WriteLine();
-
-                switch (respostaMenu)
+                
+                switch (respostaMenu) //Decisão do menu
                 {
-                    case 1:
+                    case 1: //Decisão
+                        Console.WriteLine("    ==================================");
                         Console.WriteLine("    ******* CADASTRAR RECEITAS *******");
-                        Console.WriteLine();
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("    ==================================\n\n\n");
 
 
                         Console.Write("Quantas Receitas deseja adicionar: ");
-                        int numReceitas = int.Parse(Console.ReadLine());
-                        Console.WriteLine();
+                        int numReceitas = int.Parse(Console.ReadLine()); //Quantidade de receitas para cadastrar
 
-                        for (int i = 0; i < numReceitas; i++)
+                        Console.Clear(); //Limpar tela
+
+                        for (int i = 0; i < numReceitas; i++) //Ciclo de repetição de quantas vezes será feito o cadastro de receitas
                         {
-                            Console.WriteLine("Receita #" + i + ": ");
+                            Console.WriteLine($"\n\nReceita #{i+1} : ");
                             
-                            Console.Write("\nNome: ");
-                            nomeReceita = Console.ReadLine();
+                            Console.Write("\n\nNome: ");
+                            string nomeReceita = Console.ReadLine();
                             
                             Console.Write("\nCódigo: ");
                             int codigo = int.Parse(Console.ReadLine());
@@ -98,46 +94,51 @@ namespace SA02_ThiagoIgnacio_
                             double preco = double.Parse(Console.ReadLine());
                             Console.WriteLine();
                             Console.WriteLine();
-                            Console.WriteLine($"        ******* Receita '{nomeReceita}' Cadastrada ********");
+                            Console.WriteLine($"    ******* Receita '{nomeReceita}' Cadastrada ********");
                             Console.WriteLine();
 
-                            receita[i] = new Receita(nomeReceita, codigo, tempoPreparacao,
+                            receita[i] = new Receita(nomeReceita, codigo, tempoPreparacao, //Vetor recebendo os valores inseridos
                                                  grauDificuldade, numPessoas, categoria,
                                                  descricao, ingredientes, preco);
 
-                            receitas.Add(new Receita(nomeReceita, codigo, tempoPreparacao,
+                            receitas.Add(new Receita(nomeReceita, codigo, tempoPreparacao, //Lista recebendo os valores inseridos
                                                      grauDificuldade, numPessoas, categoria,
                                                      descricao, ingredientes, preco));
 
-                            cont = cont + 1;
+                            cont = cont + 1; //Contador de receitas cadastradas
+
+                            Console.ReadKey(); //Chave vazia
+                            Console.Clear(); //Limpar tela
 
                         }
 
-                        break;
+                        break; //Fim Decisão
 
-                    case 2:
+                    case 2: //Decisão
                         Console.WriteLine("    ===============================");
                         Console.WriteLine("    ******* EDITAR RECEITAS *******");
-                        Console.WriteLine("    ===============================");
-                        Console.WriteLine();
-                        Console.WriteLine();
-                        Console.WriteLine();
-                        do
+                        Console.WriteLine("    ===============================\n\n\n");
+
+                        do //Inicializando Ciclo de repetição
                         {
                             Console.Write("Diga o código da receita que deseja editar: ");
-                            int codEditar = int.Parse(Console.ReadLine());
-                            Console.WriteLine();
-                            Console.WriteLine();
-                            for (int i = 0; i < cont; i++)
+                            int codEditar = int.Parse(Console.ReadLine()); //Inserir codigo para consulta
+
+                            Console.Clear(); //Limpar tela
+
+                            for (int i = 0; i < cont; i++) //Ciclo de repetição de quantas receitas foram o cadastradas
                             {
 
-                                if (receita[i].Codigo == codEditar)
+                                if (receita[i].Codigo == codEditar) //Identificar se o codigo existe para ser editado
                                 {
-                                    receita[i] = null;
-                                    Console.WriteLine("Receita #" + i + ": ");
+                                    receita[i] = null; //Apagar dados da receita do vetor
+                                    receitas.Remove(receitas[i]); //Apagar dados da receita da lista
 
-                                    Console.Write("\nNome: ");
-                                    nomeReceita = Console.ReadLine();
+                                    //Editar receita
+                                    Console.WriteLine($"\n\nReceita #{i+1} : ");
+
+                                    Console.Write("\n\nNome: ");
+                                    string nomeReceita = Console.ReadLine();
 
                                     Console.Write("\nCódigo: ");
                                     int codigo = int.Parse(Console.ReadLine());
@@ -176,208 +177,227 @@ namespace SA02_ThiagoIgnacio_
                                     Console.Write("\nPreco: R$ ");
                                     double preco = double.Parse(Console.ReadLine());
 
-                                    receita[i] = new Receita(nomeReceita, codigo, tempoPreparacao,
+                                    
+                                    Console.WriteLine("\n\n    ============================================");
+                                    Console.WriteLine($"    ******* Receita Editada Com Sucesso ********");
+                                    Console.WriteLine("    ============================================\n\n");
+
+                                    receitas.Add(new Receita(nomeReceita, codigo, tempoPreparacao, //Vetor recebendo os valores inseridos
+                                                     grauDificuldade, numPessoas, categoria,
+                                                     descricao, ingredientes, preco));
+
+                                    receita[i] = new Receita(nomeReceita, codigo, tempoPreparacao, //Lista recebendo os valores inseridos
                                                          grauDificuldade, numPessoas, categoria,
                                                          descricao, ingredientes, preco);
 
-                                    receitas.Add(new Receita(nomeReceita, codigo, tempoPreparacao,
-                                                     grauDificuldade, numPessoas, categoria,
-                                                     descricao, ingredientes, preco));
+                                    
+
+                                    Console.ReadKey(); //Chave vazia
+                                    Console.Clear(); //Limpar tela
+
                                 }
 
 
                             }
-                            Console.Write("Deseja Editar mais alguma ? ");
-                            voltarEdicao = Console.ReadLine();
+                            Console.Write("\n\nDeseja Editar mais alguma ? ");
+                            voltarEdicao = Console.ReadLine(); //Voltar ciclo de repetição "editar receita" (do while)
                         }
-                        while (voltarEdicao == "sim" || voltarEdicao == "SIM" || voltarEdicao == "Sim");
+                        while (voltarEdicao == "sim" || voltarEdicao == "SIM" || voltarEdicao == "Sim"); //Voltar ciclo de repetição 
 
-                        break;
+                        break; //Fim Decisão
 
-                    case 3:
+                    case 3: //Decisão
                         Console.WriteLine("    =================================");
                         Console.WriteLine("    ******* ELIMINAR RECEITAS *******");
-                        Console.WriteLine("    =================================");
-                        Console.WriteLine();
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("    =================================\n\n\n");
 
-                        do
-                        {
                             Console.Write("Diga o código da receita que deseja eliminar: ");
-                            int codEliminar = int.Parse(Console.ReadLine());
-                            Console.WriteLine();
-                            Console.WriteLine();
+                            int codEliminar = int.Parse(Console.ReadLine()); //Inserir codigo para consulta
 
-                            for (int i = 0; i < cont; i++)
+                        Console.Clear(); //Limpar tela
+
+                        for (int i = 0; i < cont; i++) //Ciclo de repetição de quantas receitas foram o cadastradas
+                        {
+                            if (receita[i].Codigo == codEliminar) //Identificar se o codigo existe para ser eliminado
                             {
+                                Console.WriteLine("\n    *******RECEITA DE NOME " + receita[i].NomeReceita + " APAGADA COM SUCESSO*******");
 
-                                if (receita[i].Codigo == codEliminar)
-                                {
-                                    Console.WriteLine();
-                                    Console.WriteLine("    *******RECEITA DE NOME " + receita[i].NomeReceita + " APAGADA COM SUCESSO*******");
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                    receita[i] = null;
-                                }
+                                Console.ReadKey(); //Chave vazia
+                                Console.Clear(); //Limpar tela
 
-
+                                receita[i] = null; //Apagar dados da receita do vetor
+                                receitas.Remove(receitas[i]); //Apagar dados da receita da lista
                             }
-                            Console.Write("Deseja Excluir mais alguma ? ");
-                            voltarEdicao = Console.ReadLine();
+
+
                         }
-                        while (voltarEdicao == "sim" || voltarEdicao == "SIM" || voltarEdicao == "Sim");
+                            
 
-                        break;
+                        break; //Fim Decisão
 
-                    case 4:
+                    case 4: //Decisão
                         Console.WriteLine("    ====================================");
                         Console.WriteLine("    ******* RECEITAS CADASTRADAS *******");
-                        Console.WriteLine("    ====================================");
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("    ====================================\n\n");
 
-                        foreach (Receita i in receita)
+                        foreach (Receita i in receita) //Estrutura de repetição
                         {
                             Console.WriteLine($"{i}\n");
                         }
 
-                        break;
+                        Console.ReadKey(); //Chave vazia
 
-                    case 5:
+                        break; //Fim Decisão
+
+                    case 5: //Decisão
 
                         Console.WriteLine("    ==============================");
                         Console.WriteLine("    ********** CONSULTAS *********");
-                        Console.WriteLine("    ==============================");
-                        Console.WriteLine();
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("    ==============================\n\n\n");
                          
                         string resp;
-                        do
+                        do //Inicializando Ciclo de repetição
                         {
-                            Console.WriteLine("Opcões de consulta:");
-                            Console.WriteLine();
+                            Console.WriteLine("Opcões de consulta:\n");
+
                             Console.WriteLine("1-Listar receitas por dificuldade;");
                             Console.WriteLine("2-Listar receitas por categoria;");
                             Console.WriteLine("3-Listar receitas por tempo de preparação;");
-                            Console.WriteLine("4-Valor estimado da receita;");
-                            Console.WriteLine();
+                            Console.WriteLine("4-Valor estimado da receita;\n");
 
                             Console.Write("Digite a opção desejada para fazer a consulta da receita: ");
-                            int opcaoConsulta = int.Parse(Console.ReadLine());
+                            int opcaoConsulta = int.Parse(Console.ReadLine()); //Opção do sub-menu
 
-                            switch (opcaoConsulta)
+                            Console.Clear(); //Limpar tela
+
+                            switch (opcaoConsulta) //Decisão do sub-menu
                             {
-                                case 1:
+                                case 1: //Decisão
                                     Console.WriteLine("    =============================================");
                                     Console.WriteLine("    ********** RECEITAS POR DIFICULDADE *********");
-                                    Console.WriteLine("    =============================================");
-                                    Console.WriteLine();
-                                    Console.WriteLine();
+                                    Console.WriteLine("    =============================================\n\n");
 
-                                    Console.Write("Grau de Dificuldade Existente: ");
-                                    Console.WriteLine();
+                                    Console.Write("Grau de Dificuldade Existente: \n");
                                     Console.WriteLine("1-Fácil");
                                     Console.WriteLine("2-Médio");
                                     Console.WriteLine("3-Difícil");
-                                    Console.WriteLine("4-Muito Difícil");
-                                    Console.WriteLine();
+                                    Console.WriteLine("4-Muito Difícil\n\n");
                                     
                                      
-                                    Console.ReadKey();
-                                    Console.Clear();
+                                    Console.ReadKey(); //Chave vazia
 
-                                    List<Receita> receitasDificuldade = (from r in receitas
+                                    List<Receita> receitasDificuldade = (from r in receitas //Ordem Crecente do grau de dificuldade
                                                                          orderby r.GrauDificuldade ascending
                                                                          select r).ToList();
 
-                                    foreach (Receita j in receitasDificuldade)
+                                    foreach (Receita j in receitasDificuldade) //Estrutura de repetição
                                     {
-                                        Console.WriteLine($"{j}\n");
+                                        Console.WriteLine($"{j}\n\n");
 
                                     }
 
-                                    break;
+                                    Console.ReadKey(); //Chave vazia
+                                    Console.Clear(); //Limpar tela
 
-                                case 2:
+                                    break; //Fim Decisão
+
+                                case 2: //Decisão
 
                                     Console.WriteLine("    =============================================");
                                     Console.WriteLine("    *********** RECEITAS POR CATEGORIA **********");
-                                    Console.WriteLine("    =============================================");
-                                    Console.WriteLine();
-                                    Console.WriteLine();
+                                    Console.WriteLine("    =============================================\n\n");
 
-                                    List<Receita> receitasCategoria = (from j in receitas
+                                    Console.Write("Categorias: \n");
+
+                                    Console.WriteLine("1-Doce");
+                                    Console.WriteLine("2-Salgado");
+                                    Console.WriteLine("3-Massa\n\n");
+
+                                    Console.ReadKey();
+
+                                    List<Receita> receitasCategoria = (from j in receitas //Ordem Crecente das categorias
                                                                        orderby j.Categoria ascending
                                                                        select j).ToList();
 
-                                    foreach (Receita j in receitasCategoria)
+                                    foreach (Receita j in receitasCategoria) //Estrutura de repetição
                                     {
-                                        Console.WriteLine($"{j}\n");
+                                        Console.WriteLine($"{j}\n\n");
 
                                     }
 
-                                    break;
+                                    Console.ReadKey(); //Chave vazia
+                                    Console.Clear(); //Limpar tela
 
-                                case 3:
+                                    break; //Fim Decisão
+
+                                case 3: //Decisão
 
                                     Console.WriteLine("    =====================================================");
                                     Console.WriteLine("    ********** RECEITAS POR TEMPO DE PREPARAÇÃO *********");
-                                    Console.WriteLine("    =====================================================");
-                                    Console.WriteLine();
-                                    Console.WriteLine();
+                                    Console.WriteLine("    =====================================================\n\n");
 
-                                    List<Receita> receitasTempoPreparacao = (from j in receitas
-                                                                       orderby j.TempoPreparacao ascending
-                                                                       select j).ToList();
+                                    List<Receita> receitasTempoPreparacao = (from j in receitas //Ordem Crecente do tempo de preparação
+                                                                             orderby j.TempoPreparacao ascending
+                                                                             select j).ToList();
 
-                                    foreach (Receita j in receitasTempoPreparacao)
+                                    foreach (Receita j in receitasTempoPreparacao) //Estrutura de repetição
                                     {
-                                        Console.WriteLine($"{j}\n");
+                                        Console.WriteLine($"{j}\n\n");
 
                                     }
 
+                                    Console.ReadKey(); //Chave vazia
+                                    Console.Clear(); //Limpar tela
 
-                                    break;
+                                    break; //Fim Decisão
 
-                                case 4:
+                                case 4: //Decisão
 
                                     Console.WriteLine("    ================================================");
                                     Console.WriteLine("    ********** RECEITAS POR VALOR ESTIMADO *********");
-                                    Console.WriteLine("    ================================================");
-                                    Console.WriteLine();
-                                    Console.WriteLine();
+                                    Console.WriteLine("    ================================================\n\n");
 
-                                    List<Receita> receitasValor = (from j in receitas
+                                    List<Receita> receitasValor = (from j in receitas //Ordem Crecente dos valores
                                                                    orderby j.Preco ascending
                                                                    select j).ToList();
 
-                                    foreach (Receita j in receitasValor)
+                                    foreach (Receita j in receitasValor) //Estrutura de repetição
                                     {
                                         Console.WriteLine($"{j}\n");
 
                                     }
 
-                                    break;
+                                    Console.ReadKey(); //Chave vazia
+                                    Console.Clear(); //Limpar tela
+
+                                    break; //Fim Decisão
 
                             }
 
+                            Console.Write("\n\n Deseja fazer nova consulta ? ");
+                            resp = Console.ReadLine(); //Voltar ciclo de repetição do menu (do while)
 
-
-                            Console.Write("Deseja fazer nova consulta ? ");
-                            resp = Console.ReadLine();
+                            Console.Clear(); //Limpar tela
                         }
-                        while (resp == "sim" || resp == "SIM" || resp == "Sim");
+                        while (resp == "sim" || resp == "SIM" || resp == "Sim"); //Voltar ciclo de repetição 
 
-                        break;
+                        break; // Fim Decisão
+
+
 
                 }
-                Console.Write("Digite 'm' para voltar ao menu ou 's' para sair do programa: ");
-                menu = Console.ReadLine();
+                Console.Clear(); //Limpar tela
 
+                Console.Write("\n\n  Digite 'm' para voltar ao menu ou 's' para sair do programa: ");
+                menu = Console.ReadLine(); //Voltar ciclo de repetição do menu (do while)
+
+                Console.Clear(); //Limpar tela
             }
-            while (menu == "m");
+            while (menu == "m"); //Voltar ciclo de repetição 
+
+            Console.WriteLine("\n\n\n\n\n       =======================================");
+            Console.WriteLine("       ********* PROGRAMA FINALIZADO *********");
+            Console.WriteLine("       =======================================\n\n\n\n\n");
         }
     }
 }
