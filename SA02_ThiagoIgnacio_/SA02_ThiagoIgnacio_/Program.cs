@@ -9,7 +9,7 @@ namespace SA02_ThiagoIgnacio_
     {
         static void Main(string[] args)
         {
-            Receita[] receita = new Receita[4]; //Vetor - Cadastrar, Editar, Eliminar e Exibir Receitas Existentes
+            Receita[] receita = new Receita[30]; //Vetor - Cadastrar, Editar, Eliminar e Exibir Receitas Existentes
             List<Receita> receitas = new List<Receita>(); //Lista - Consulta de Receitas
 
             string menu; //Voltar ciclo de repetição do menu (do while)
